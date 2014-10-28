@@ -30,6 +30,9 @@ set cc=120
 " make backspace work like most other apps
 set backspace=2 
 
+" Start scrolling three lines before the horizontal window border
+set scrolloff=3
+
 " JSON syntax trick
 autocmd BufNewFile,BufRead *.json set ft=javascript
 

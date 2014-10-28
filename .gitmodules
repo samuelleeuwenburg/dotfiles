@@ -29,3 +29,6 @@
 	path = .vim/bundle/vim-css-color
 	url = https://github.com/ap/vim-css-color
 
+[submodule ".vim/bundle/emmet-vim"]
+	path = .vim/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim
