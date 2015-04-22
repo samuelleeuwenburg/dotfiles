@@ -1,17 +1,22 @@
 " Pathogen stuff
 call pathogen#infect()
 
-" enable syntax-highlighting
 syntax on 
 filetype plugin on
 
 set t_Co=256
-colorscheme jellybeans 
+colorscheme flattown
+
+if &term =~ '256color'
+  " disable Background Color Erase (BCE)
+  set t_ut=
+endif
+
 
 " Settings
 set autoindent
-set cursorcolumn
-set cursorline
+" set cursorcolumn
+" set cursorline
 set foldmethod=marker
 set hlsearch
 " set lcs=tab:--,trail:·,eol:¬
@@ -22,8 +27,9 @@ set numberwidth=5
 set ruler
 set showcmd
 set smartindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set cc=120
 
@@ -50,15 +56,19 @@ let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
 
 " vim-multiple-cursor stuff
-let g:multi_cursor_next_key='<C-d>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<Esc>'
+" let g:multi_cursor_next_key='<C-d>'
+" let g:multi_cursor_prev_key='<C-p>'
+" let g:multi_cursor_skip_key='<C-x>' 
+" let g:multi_cursor_quit_key='<Esc>' 
 
 " neocompletecache stuff
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#min_syntax_length = 2
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" turn on LimeLight plugin when entering INSERT mode
+autocmd InsertEnter * :Limelight
+autocmd InsertLeave * :Limelight!
 
 
