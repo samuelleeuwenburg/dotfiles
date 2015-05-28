@@ -53,7 +53,7 @@ set directory=~/.vim/_temp//
 " NERDTree stuff 
 autocmd vimenter * if !argc() | NERDTree | endif
 let NERDTreeShowHidden=1
-map <C-n> :NERDTreeToggle<CR>
+map <C-e> :NERDTreeToggle<CR>
 
 " vim-multiple-cursor stuff
 " let g:multi_cursor_next_key='<C-d>'
