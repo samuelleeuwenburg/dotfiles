@@ -5,7 +5,7 @@ syntax on
 filetype plugin on
 
 set t_Co=256
-colorscheme flattown
+colorscheme cobalt2 
 
 if &term =~ '256color'
   " disable Background Color Erase (BCE)
@@ -68,7 +68,10 @@ let g:neocomplete#min_syntax_length = 2
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " turn on LimeLight plugin when entering INSERT mode
-autocmd InsertEnter * :Limelight
-autocmd InsertLeave * :Limelight!
+" autocmd InsertEnter * :Limelight
+" autocmd InsertLeave * :Limelight!
+
+" check for lint files in the project to enable eslinter
+autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') != '' ? ['eslint'] : ['standard']
 
 

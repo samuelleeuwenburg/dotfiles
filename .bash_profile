@@ -11,4 +11,6 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 . ~/.nvm/nvm.sh
-nvm use 0.10
+nvm use 4
+
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
