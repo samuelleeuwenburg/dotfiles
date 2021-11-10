@@ -1,6 +1,7 @@
 execute pathogen#infect()
 
-colorscheme OceanicNext
+colorscheme onedark
+" colorscheme OceanicNext
 " colorscheme jellybeans
 " colorscheme one
 " set background=dark
@@ -20,6 +21,8 @@ set hlsearch
 set lcs=tab:--,trail:·,eol:¬
 set list
 
+" regexpengine, :help 're'
+set re=2
 
 autocmd BufRead,BufNewFile  *.purs set tabstop=2|set shiftwidth=2
 
@@ -43,11 +46,13 @@ let g:ale_fix_on_save = 1
 let js_fixers = ['prettier', 'eslint']
 let g:ale_fixers = {
 \  'typescript': ['prettier'],
+\  'typescriptreact': ['prettier'],
 \  'javascript': ['prettier']
 \}
 
 let g:ale_linters = {
 \  'typescript': ['tsserver', 'typecheck'],
+\  'typescriptreact': ['tsserver', 'typecheck'],
 \  'rust': ['cargo']
 \}
 
